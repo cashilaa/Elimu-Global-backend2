@@ -9,6 +9,7 @@ import { CoursesModule } from './courses/courses.module';
 import { StudentsModule } from './students/students.module';
 import { InstructorsModule } from './instructors/instructors.module';
 import { AdminsModule } from './admin/admin.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { AdminsModule } from './admin/admin.module';
       isGlobal: true,
     }),
     MongooseModule.forRoot(process.env.MONGODB_URI),
+    AuthModule,
     UsersModule,
     CategoriesModule,
     CoursesModule,
