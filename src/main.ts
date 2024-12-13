@@ -10,7 +10,10 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
   app.enableCors({
-    origin: 'https://elimu-global-testing.onrender.com', // Specify the allowed origin
+    origin: [
+      'https://elimu-global-testing.onrender.com',
+      'http://localhost:5000',
+    ], // Specify the allowed origins
     credentials: true, // Allow credentials
   });
 
